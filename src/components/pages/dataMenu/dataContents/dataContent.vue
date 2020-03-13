@@ -7,8 +7,10 @@
 				<el-aside class="main_info">
 					<el-tabs type="border-card" width="350px" :stretch="true">
 						<el-tab-pane label="总行部门">
-							<span style="margin-left: 30px;color: #0085FF;">全部</span>
-							<span style="float: right;margin-right: 5px;color: gray;">目录数</span>
+							<div>
+								<span style="margin-left: 10px;color: royalblue;font-size: 15px;">全部</span>
+								<span style="float: right;color:darkgray;margin-right: 10px;font-size: 15px;">目录数</span>
+							</div>
 							<div style="height: 600px;">
 								<el-table :data="allDepartment" style="width: 100%;" :show-header="false">
 									<el-table-column>
@@ -23,6 +25,10 @@
 							</div>
 						</el-tab-pane>
 						<el-tab-pane label="经营单位">
+							<div>
+								<span style="margin-left: 10px;color: royalblue;font-size: 15px;">全部</span>
+								<span style="float: right;color:darkgray;margin-right: 10px;font-size: 15px;">目录数</span>
+							</div>
 							<div style="height: 600px;">
 								<el-table :data="businessDepartment" style="width: 100%;" :show-header="false">
 									<el-table-column>
@@ -76,15 +82,14 @@
 					}
 				],
 				//经营
-				businessDepartment: [
+				businessDepartment: [{
+						title: '财务部',
+						name: '6'
+					},
 					{
-							title: '财务部',
-							name: '6'
-						},
-						{
-							title: '风控部',
-							name: '1'
-						}
+						title: '风控部',
+						name: '1'
+					}
 				]
 			};
 		},
@@ -95,7 +100,25 @@
 	};
 </script>
 
-<style>
+<style lang="scss">
+	.el-tabs--border-card>.el-tabs__header .el-tabs__item {
+		font-size: 14px ;
+		font-weight: 400;
+		background-color: rgb(25,100,200) ;
+		color: rgb(255, 255, 255);
+		text-align: center;
+		border-width: 0;
+	}
+	.el-tabs--border-card>.el-tabs__header .el-tabs__item.is-active{
+		font-size: 15px ;
+		font-weight: 600;
+		background-color: rgb(25, 142, 248);
+		color: rgb(255, 255, 255);
+		text-align: center;
+		border-width: 0;
+	}
+	
+
 	.top_spacing {
 		height: 34px;
 		width: 100%;
