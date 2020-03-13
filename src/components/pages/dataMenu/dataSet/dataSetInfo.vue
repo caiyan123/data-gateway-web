@@ -47,7 +47,7 @@
 								</el-col>
 							</el-row>
 							<el-row style="height: 50px;font-size:14px">
-<!-- 								<el-col :span="1.5"><span>更新日期：</span></el-col>
+								<el-col :span="1.5"><span>更新日期：</span></el-col>
 								<el-col :span="2">
 									<span>{{ props.row.date }}</span>
 								</el-col>
@@ -70,7 +70,7 @@
 								<el-col :span="1.5"><span>数据量：</span></el-col>
 								<el-col :span="2">
 									<span>{{ props.row.dataNum }}</span>
-								</el-col> -->
+								</el-col>
 							</el-row>
 							<el-row style="height: 30px;font-size:14px">
 								<el-col :span="2">

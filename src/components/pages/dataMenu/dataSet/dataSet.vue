@@ -159,7 +159,7 @@
 	};
 </script>
 
-<style>
+<style lang="scss">
 	.el-tabs__item {
 		font-size: 18px;
 	}
